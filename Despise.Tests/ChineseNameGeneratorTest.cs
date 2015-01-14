@@ -6,13 +6,6 @@ namespace Despise.Tests
     public class ChineseNameGeneratorTest
     {
         [TestMethod]
-        public void CanGetAChineseName()
-        {
-            var generator = new ChineseNameGenerator();
-            var name = generator.Generate();
-        }
-
-        [TestMethod]
         public void CanGetManyChineseName()
         {
             var generator = new ChineseNameGenerator();
@@ -20,9 +13,9 @@ namespace Despise.Tests
         }
 
         [TestMethod]
-        public void CanGetManyEnglishChar()
+        public void CanGetManyEnglishName()
         {
-            var generator = new EnglishCharGenerator();
+            var generator = new EnglishNameGenerator();
             var names = generator.GenerateMany(10, 20);
         }
     }

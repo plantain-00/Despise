@@ -39,9 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoolGenerator.cs" />
     <Compile Include="ChineseCharGenerator.cs" />
+    <Compile Include="EnglishNameGenerator.cs" />
     <Compile Include="ChineseNameGenerator.cs" />
-    <Compile Include="EnglishCharGenerator.cs" />
+    <Compile Include="EnglishLowerCaseCharGenerator.cs" />
+    <Compile Include="EnglishUpperCaseCharGenerator.cs" />
     <Compile Include="GeneratorBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
