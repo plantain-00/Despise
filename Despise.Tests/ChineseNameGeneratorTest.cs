@@ -18,5 +18,12 @@ namespace Despise.Tests
             var generator = new ChineseNameGenerator();
             var names = generator.GenerateMany(10, 20);
         }
+
+        [TestMethod]
+        public void CanGetManyEnglishChar()
+        {
+            var generator = new EnglishCharGenerator();
+            var names = generator.GenerateMany(10, 20);
+        }
     }
 }
