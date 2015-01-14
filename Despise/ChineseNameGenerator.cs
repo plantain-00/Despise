@@ -21,8 +21,7 @@ namespace Despise
 
         public string Generate()
         {
-            var number = _chineseCharGenerator.Random.Next(2, 4);
-            var result = _chineseCharGenerator.GenerateMany(number);
+            var result = _chineseCharGenerator.GenerateMany(2, 4);
             return new string(result);
         }
 
@@ -34,6 +33,12 @@ namespace Despise
                 result[i] = Generate();
             }
             return result;
+        }
+
+        public string[] GenerateMany(int from, int to)
+        {
+            var number = Random.Next(from, to);
+            return GenerateMany(number);
         }
     }
 }

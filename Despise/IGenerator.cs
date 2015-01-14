@@ -7,5 +7,6 @@ namespace Despise
         Random Random { get; }
         T Generate();
         T[] GenerateMany(int number);
+        T[] GenerateMany(int from, int to);
     }
 }

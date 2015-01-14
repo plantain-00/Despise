@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Despise.Tests
 {
@@ -17,7 +16,7 @@ namespace Despise.Tests
         public void CanGetManyChineseName()
         {
             var generator = new ChineseNameGenerator();
-            var names = generator.GenerateMany(10);
+            var names = generator.GenerateMany(10, 20);
         }
     }
 }

@@ -35,5 +35,11 @@ namespace Despise
             }
             return result;
         }
+
+        public char[] GenerateMany(int from, int to)
+        {
+            var number = _random.Next(from, to);
+            return GenerateMany(number);
+        }
     }
 }
