@@ -1,13 +1,10 @@
 namespace Despise
 {
-    public class ChineseCharGenerator : GeneratorBase<char>
+    public class ChineseCharGenerator : CharGenerator
     {
-        private const int START_CHAR = 0x4E00;
-        private const int END_CHAR = 0x9FA5;
-
         public override char Generate()
         {
-            return (char) Random.Next(START_CHAR, END_CHAR);
+            return Generate((char) 0x4E00, (char) 0x9FA5);
         }
     }
 }

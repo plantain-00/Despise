@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BoolGenerator.cs" />
+    <Compile Include="CharGenerator.cs" />
     <Compile Include="ChineseCharGenerator.cs" />
     <Compile Include="EnglishNameGenerator.cs" />
     <Compile Include="ChineseNameGenerator.cs" />
@@ -47,6 +48,8 @@
     <Compile Include="EnglishUpperCaseCharGenerator.cs" />
     <Compile Include="Generator.cs" />
     <Compile Include="GeneratorBase.cs" />
+    <Compile Include="NumberCharGenerator.cs" />
+    <Compile Include="PhoneNumberGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
