@@ -4,24 +4,26 @@ namespace Despise
 {
     public class ChineseNameGenerator : IGenerator<string>
     {
-        private const int START_CHAR = 0x4E00;
-        private const int END_CHAR = 0x9FA5;
-        private readonly Random _random;
+        private readonly ChineseCharGenerator _chineseCharGenerator;
 
         public ChineseNameGenerator()
         {
-            _random = new Random();
+            _chineseCharGenerator = new ChineseCharGenerator();
+        }
+
+        public Random Random
+        {
+            get
+            {
+                return _chineseCharGenerator.Random;
+            }
         }
 
         public string Generate()
         {
-            var number = _random.Next(2, 4);
-            var result = "";
-            for (var i = 0; i < number; i++)
-            {
-                result += (char) _random.Next(START_CHAR, END_CHAR);
-            }
-            return result;
+            var number = _chineseCharGenerator.Random.Next(2, 4);
+            var result = _chineseCharGenerator.GenerateMany(number);
+            return new string(result);
         }
 
         public string[] GenerateMany(int number)

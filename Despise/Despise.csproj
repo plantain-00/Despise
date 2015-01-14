@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChineseCharGenerator.cs" />
     <Compile Include="ChineseNameGenerator.cs" />
     <Compile Include="IGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
