@@ -1,13 +1,11 @@
 using System;
+using System.Collections.Generic;
 
 namespace Despise
 {
     public abstract class GeneratorBase<T>
     {
-        private BoolGenerator _bool;
-        private ChineseCharGenerator _chineseChar;
-        private EnglishLowerCaseCharGenerator _englishLowerCaseChar;
-        private EnglishUpperCaseCharGenerator _englishUpperCaseChar;
+        private Dictionary<Type, object> _factory;
 
         protected GeneratorBase()
         {
@@ -16,51 +14,26 @@ namespace Despise
 
         public Random Random { get; private set; }
 
-        public ChineseCharGenerator ChineseChar
+        public TGenerator Get<TGenerator>() where TGenerator : class, new()
         {
-            get
+            if (_factory == null)
             {
-                if (_chineseChar == null)
-                {
-                    _chineseChar = new ChineseCharGenerator();
-                }
-                return _chineseChar;
+                _factory = new Dictionary<Type, object>();
             }
-        }
-        public EnglishUpperCaseCharGenerator EnglishUpperCaseChar
-        {
-            get
+            var type = typeof (TGenerator);
+            if (!_factory.ContainsKey(type))
             {
-                if (_englishUpperCaseChar == null)
-                {
-                    _englishUpperCaseChar = new EnglishUpperCaseCharGenerator();
-                }
-                return _englishUpperCaseChar;
+                _factory.Add(type, new TGenerator());
             }
+            return _factory[type] as TGenerator;
         }
-        public EnglishLowerCaseCharGenerator EnglishLowerCaseChar
-        {
-            get
-            {
-                if (_englishLowerCaseChar == null)
-                {
-                    _englishLowerCaseChar = new EnglishLowerCaseCharGenerator();
-                }
-                return _englishLowerCaseChar;
-            }
-        }
-        public BoolGenerator Bool
-        {
-            get
-            {
-                if (_bool == null)
-                {
-                    _bool = new BoolGenerator();
-                }
-                return _bool;
-            }
-        }
+
         public abstract T Generate();
+
+        public virtual T Generate(T from, T to)
+        {
+            return Generate();
+        }
 
         public T[] GenerateMany(int number)
         {

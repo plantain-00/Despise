@@ -45,6 +45,7 @@
     <Compile Include="ChineseNameGenerator.cs" />
     <Compile Include="EnglishLowerCaseCharGenerator.cs" />
     <Compile Include="EnglishUpperCaseCharGenerator.cs" />
+    <Compile Include="Generator.cs" />
     <Compile Include="GeneratorBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

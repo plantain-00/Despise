@@ -4,7 +4,12 @@
     {
         public override string Generate()
         {
-            var result = ChineseChar.GenerateMany(2, 4);
+            return Generate("00", "0000");
+        }
+
+        public override string Generate(string from, string to)
+        {
+            var result = Get<ChineseCharGenerator>().GenerateMany(from.Length, to.Length);
             return new string(result);
         }
     }
