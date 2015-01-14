@@ -4,10 +4,10 @@ namespace Despise
 {
     public abstract class GeneratorBase<T>
     {
-        private GeneratorBase<bool> _bool;
-        private GeneratorBase<char> _chineseChar;
-        private GeneratorBase<char> _englishLowerCaseChar;
-        private GeneratorBase<char> _englishUpperCaseChar;
+        private BoolGenerator _bool;
+        private ChineseCharGenerator _chineseChar;
+        private EnglishLowerCaseCharGenerator _englishLowerCaseChar;
+        private EnglishUpperCaseCharGenerator _englishUpperCaseChar;
 
         protected GeneratorBase()
         {
@@ -16,7 +16,7 @@ namespace Despise
 
         public Random Random { get; private set; }
 
-        public GeneratorBase<char> ChineseChar
+        public ChineseCharGenerator ChineseChar
         {
             get
             {
@@ -27,7 +27,7 @@ namespace Despise
                 return _chineseChar;
             }
         }
-        public GeneratorBase<char> EnglishUpperCaseChar
+        public EnglishUpperCaseCharGenerator EnglishUpperCaseChar
         {
             get
             {
@@ -38,7 +38,7 @@ namespace Despise
                 return _englishUpperCaseChar;
             }
         }
-        public GeneratorBase<char> EnglishLowerCaseChar
+        public EnglishLowerCaseCharGenerator EnglishLowerCaseChar
         {
             get
             {
@@ -49,7 +49,7 @@ namespace Despise
                 return _englishLowerCaseChar;
             }
         }
-        public GeneratorBase<bool> Bool
+        public BoolGenerator Bool
         {
             get
             {
