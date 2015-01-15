@@ -42,6 +42,7 @@
     <Compile Include="BoolGenerator.cs" />
     <Compile Include="CharGenerator.cs" />
     <Compile Include="ChineseCharGenerator.cs" />
+    <Compile Include="DateTimeGenerator.cs" />
     <Compile Include="EmailGenerator.cs" />
     <Compile Include="EnglishNameGenerator.cs" />
     <Compile Include="ChineseNameGenerator.cs" />

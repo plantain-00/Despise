@@ -44,5 +44,12 @@ namespace Despise.Tests
             var generator = new Generator();
             var numbers = generator.Get<EmailGenerator>().GenerateMany(10, 20);
         }
+
+        [TestMethod]
+        public void CanGetManyDateTimes()
+        {
+            var generator = new Generator();
+            var numbers = generator.Get<DateTimeGenerator>().GenerateMany(10, 20);
+        }
     }
 }
