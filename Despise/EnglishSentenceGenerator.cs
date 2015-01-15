@@ -1,6 +1,6 @@
 ﻿namespace Despise
 {
-    public class SentenceGenerator : GeneratorBase<string>
+    public class EnglishSentenceGenerator : GeneratorBase<string>
     {
         public override string Generate()
         {

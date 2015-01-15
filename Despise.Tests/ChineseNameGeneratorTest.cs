@@ -56,7 +56,14 @@ namespace Despise.Tests
         public void CanGetManySentences()
         {
             var generator = new Generator();
-            var numbers = generator.Get<SentenceGenerator>().GenerateMany(10, 20);
+            var numbers = generator.Get<EnglishSentenceGenerator>().GenerateMany(10, 20);
+        }
+
+        [TestMethod]
+        public void CanGetManyChineseSentences()
+        {
+            var generator = new Generator();
+            var numbers = generator.Get<ChineseSentenseGenerator>().GenerateMany(10, 20);
         }
     }
 }
