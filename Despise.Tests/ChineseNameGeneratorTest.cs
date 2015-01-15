@@ -51,5 +51,12 @@ namespace Despise.Tests
             var generator = new Generator();
             var numbers = generator.Get<DateTimeGenerator>().GenerateMany(10, 20);
         }
+
+        [TestMethod]
+        public void CanGetManySentences()
+        {
+            var generator = new Generator();
+            var numbers = generator.Get<SentenceGenerator>().GenerateMany(10, 20);
+        }
     }
 }
