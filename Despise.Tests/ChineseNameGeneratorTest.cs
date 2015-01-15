@@ -53,7 +53,7 @@ namespace Despise.Tests
         }
 
         [TestMethod]
-        public void CanGetManySentences()
+        public void CanGetManyEnglishSentences()
         {
             var generator = new Generator();
             var numbers = generator.Get<EnglishSentenceGenerator>().GenerateMany(10, 20);

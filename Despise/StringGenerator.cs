@@ -2,9 +2,15 @@
 {
     public abstract class StringGenerator<T> : GeneratorBase<string> where T : CharGenerator, new()
     {
-        public override string Generate(string from, string to)
+        public string Generate(int count)
         {
-            var result = Get<T>().GenerateMany(from.Length, to.Length);
+            var result = Get<T>().GenerateMany(count);
+            return new string(result);
+        }
+
+        public string Generate(int from, int to)
+        {
+            var result = Get<T>().GenerateMany(from, to);
             return new string(result);
         }
     }

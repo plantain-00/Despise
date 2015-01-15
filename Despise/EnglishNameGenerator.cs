@@ -4,12 +4,7 @@
     {
         public override string Generate()
         {
-            return Generate("00", "0000000");
-        }
-
-        public override string Generate(string from, string to)
-        {
-            var result = Get<EnglishLowerCaseCharGenerator>().GenerateMany(from.Length, to.Length);
+            var result = Get<EnglishLowerCaseCharGenerator>().GenerateMany(2, 7);
             return Get<EnglishUpperCaseCharGenerator>().Generate() + new string(result);
         }
     }

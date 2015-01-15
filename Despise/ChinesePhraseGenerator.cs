@@ -4,7 +4,7 @@
     {
         public override string Generate()
         {
-            return Generate("00", "0000000000");
+            return Generate(2, 10);
         }
     }
 }

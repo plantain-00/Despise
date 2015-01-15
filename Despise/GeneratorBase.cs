@@ -30,11 +30,6 @@ namespace Despise
 
         public abstract T Generate();
 
-        public virtual T Generate(T from, T to)
-        {
-            return Generate();
-        }
-
         public T[] GenerateMany(int number)
         {
             var result = new T[number];
