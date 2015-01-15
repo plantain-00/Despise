@@ -42,12 +42,14 @@
     <Compile Include="BoolGenerator.cs" />
     <Compile Include="CharGenerator.cs" />
     <Compile Include="ChineseCharGenerator.cs" />
+    <Compile Include="EmailGenerator.cs" />
     <Compile Include="EnglishNameGenerator.cs" />
     <Compile Include="ChineseNameGenerator.cs" />
     <Compile Include="EnglishLowerCaseCharGenerator.cs" />
     <Compile Include="EnglishUpperCaseCharGenerator.cs" />
     <Compile Include="Generator.cs" />
     <Compile Include="GeneratorBase.cs" />
+    <Compile Include="MixCharGenerator.cs" />
     <Compile Include="NumberCharGenerator.cs" />
     <Compile Include="PhoneNumberGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

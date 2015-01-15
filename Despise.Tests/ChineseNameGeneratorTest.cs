@@ -25,5 +25,24 @@ namespace Despise.Tests
             var generator = new Generator();
             var numbers = generator.Get<PhoneNumberGenerator>().GenerateMany(10, 20);
         }
+
+        [TestMethod]
+        public void CanGetManyMixChar()
+        {
+            var generator = new Generator();
+            var mixCharGenerator = generator.Get<MixCharGenerator>();
+            mixCharGenerator.Add<NumberCharGenerator>();
+            mixCharGenerator.Add<EnglishLowerCaseCharGenerator>();
+            mixCharGenerator.Add<EnglishUpperCaseCharGenerator>();
+            mixCharGenerator.Add<ChineseCharGenerator>();
+            var chars = mixCharGenerator.GenerateMany(10, 20);
+        }
+
+        [TestMethod]
+        public void CanGetManyEmails()
+        {
+            var generator = new Generator();
+            var numbers = generator.Get<EmailGenerator>().GenerateMany(10, 20);
+        }
     }
 }
