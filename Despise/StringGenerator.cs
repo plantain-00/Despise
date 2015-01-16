@@ -1,6 +1,6 @@
 ﻿namespace Despise
 {
-    public abstract class StringGenerator<T> : GeneratorBase<string> where T : CharGenerator, new()
+    public abstract class StringGenerator<T> : GeneratorBase<string> where T : GeneratorBase<char>, new()
     {
         public string Generate(int count)
         {

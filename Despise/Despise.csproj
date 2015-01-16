@@ -44,6 +44,16 @@
     <Compile Include="ChineseCharGenerator.cs" />
     <Compile Include="ChinesePhraseGenerator.cs" />
     <Compile Include="ChineseSentenseGenerator.cs" />
+    <Compile Include="CommonChineseCharGenerator.cs" />
+    <Compile Include="CommonChineseNameGenerator.cs" />
+    <Compile Include="CommonChinesePhraseGenerator.cs" />
+    <Compile Include="CommonChineseSentenseGenerator.cs" />
+    <Compile Include="CommonChineseSurnameGenerator.cs" />
+    <Compile Include="CommonEnglishFirstNameGenerator.cs" />
+    <Compile Include="CommonEnglishNameGenerator.cs" />
+    <Compile Include="CommonEnglishSentenceGenerator.cs" />
+    <Compile Include="CommonEnglishSurnameGenerator.cs" />
+    <Compile Include="CommonEnglishWordGenerator.cs" />
     <Compile Include="DateTimeGenerator.cs" />
     <Compile Include="EmailGenerator.cs" />
     <Compile Include="EnglishNameGenerator.cs" />
@@ -59,10 +69,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EnglishSentenceGenerator.cs" />
     <Compile Include="StringGenerator.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="Graph1.dgml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

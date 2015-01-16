@@ -65,5 +65,47 @@ namespace Despise.Tests
             var generator = new Generator();
             var numbers = generator.Get<ChineseSentenseGenerator>().GenerateMany(10, 20);
         }
+
+        [TestMethod]
+        public void CanGetManyCommonChineseChars()
+        {
+            var generator = new Generator();
+            var numbers = generator.Get<CommonChineseCharGenerator>().GenerateMany(10, 20);
+        }
+
+        [TestMethod]
+        public void CanGetManyCommonChineseNames()
+        {
+            var generator = new Generator();
+            var numbers = generator.Get<CommonChineseNameGenerator>().GenerateMany(20, 40);
+        }
+
+        [TestMethod]
+        public void CanGetManyCommonChineseSentences()
+        {
+            var generator = new Generator();
+            var numbers = generator.Get<CommonChineseSentenseGenerator>().GenerateMany(10, 20);
+        }
+
+        [TestMethod]
+        public void CanGetManyCommonEnglishWords()
+        {
+            var generator = new Generator();
+            var numbers = generator.Get<CommonEnglishWordGenerator>().GenerateMany(10, 20);
+        }
+
+        [TestMethod]
+        public void CanGetManyCommonEnglishSentences()
+        {
+            var generator = new Generator();
+            var numbers = generator.Get<CommonEnglishSentenceGenerator>().GenerateMany(10, 20);
+        }
+
+        [TestMethod]
+        public void CanGetManyCommonEnglishNames()
+        {
+            var generator = new Generator();
+            var numbers = generator.Get<CommonEnglishNameGenerator>().GenerateMany(10, 20);
+        }
     }
 }
