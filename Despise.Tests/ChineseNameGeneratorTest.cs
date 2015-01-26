@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Diagnostics;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Despise.Tests
 {
@@ -106,6 +108,13 @@ namespace Despise.Tests
         {
             var generator = new Generator();
             var numbers = generator.Get<CommonEnglishNameGenerator>().GenerateMany(10, 20);
+        }
+
+        [TestMethod]
+        public void CanGetManyPasswords()
+        {
+            var generator = new Generator();
+            var numbers = generator.Get<PasswordGenerator>().GenerateMany(10, 20);
         }
     }
 }
