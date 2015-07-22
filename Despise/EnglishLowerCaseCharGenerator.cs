@@ -7,19 +7,7 @@ namespace Despise
             return Generate('a', '{');
         }
 
-        public override char this[int index]
-        {
-            get
-            {
-                return (char) ('a' + index);
-            }
-        }
-        public override int RangeCount
-        {
-            get
-            {
-                return 26;
-            }
-        }
+        public override char this[int index] => (char) ('a' + index);
+        public override int RangeCount => 26;
     }
 }

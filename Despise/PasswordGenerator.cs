@@ -44,20 +44,8 @@ namespace Despise
         {
             private const string SPECIAL_CHARS = "!#$%@";
 
-            public override char this[int index]
-            {
-                get
-                {
-                    return SPECIAL_CHARS[index];
-                }
-            }
-            public override int RangeCount
-            {
-                get
-                {
-                    return SPECIAL_CHARS.Length;
-                }
-            }
+            public override char this[int index] => SPECIAL_CHARS[index];
+            public override int RangeCount => SPECIAL_CHARS.Length;
 
             public override char Generate()
             {

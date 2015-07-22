@@ -7,19 +7,7 @@ namespace Despise
             return Generate((char) 0x4E00, (char) 0x9FA5);
         }
 
-        public override char this[int index]
-        {
-            get
-            {
-                return (char) (0x4E00 + index);
-            }
-        }
-        public override int RangeCount
-        {
-            get
-            {
-                return 0x9FA5 - 0x4E00;
-            }
-        }
+        public override char this[int index] => (char) (0x4E00 + index);
+        public override int RangeCount => 0x9FA5 - 0x4E00;
     }
 }

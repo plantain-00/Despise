@@ -12,7 +12,7 @@ namespace Despise
             Random = new Random();
         }
 
-        public Random Random { get; private set; }
+        public Random Random { get; }
 
         public TGenerator Get<TGenerator>() where TGenerator : class, new()
         {
